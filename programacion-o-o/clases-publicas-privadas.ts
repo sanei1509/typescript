@@ -65,3 +65,19 @@ auto8.velocidadMax = 100;
 // auto8.marca = "Fiat"; // Error
 
 // La diferencia entre una clase publica y una privada es que la privada no se puede instanciar fuera de la clase
+
+// UTILIZAR GETTER Y SETTERS PARA ACCEDER A LAS PROPIEDADES PRIVADAS
+// en este caso la propiedad marca es privada y no se puede acceder desde fuera de la clase
+// para poder acceder a ella se utiliza un getter y un setter
+class Auto5 {
+  constructor(public velocidadMax: number, private marca: string) {}
+
+  get getMarca() {
+    return this.marca;
+  }
+
+  set setMarca(marca: string) {
+    this.marca = marca;
+  }
+}
+// ESTA ES UNA BUENA PRACTICA PARA ACCEDER A LAS PROPIEDADES PRIVADAS
